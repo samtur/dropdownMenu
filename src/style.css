@@ -93,18 +93,40 @@ body {
     grid-template-rows: 2.5% 90%;
 }
 
+.hidden {
+    display: none;
+}
+
+/* Navbar */
 .navbar {
     grid-row: 1/2;
+    border: 1px solid black;
 }
 
 .navlist {
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
     display: flex;
     flex-direction: row;
     gap: 0.5em;
 }
 
-li {
+.navlist>li {
     font-size: large;
+}
+
+.navlist>li:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+/* Menus */
+
+.fileMenu,
+.editMenu,
+.viewMenu,
+.helpMenu {
+    border: 1px black solid;
+    grid-row: 2/3;
 }
