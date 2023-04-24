@@ -114,11 +114,8 @@ video {
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: 5% 5% 5% 5%;
     grid-template-rows: 2% 98%;
-    gap: 0.75rem;
     grid-row: 1/2;
-    border: 1px solid black;
     font-family: "BigShouldersRegular";
 }
 
@@ -126,21 +123,12 @@ ul {
     list-style-type: none;
 }
 
-/* Navbar */
-/* .navbar {
-    display: grid;
-    grid-template-columns: 2% 2% 2% 2%;
-    grid-template-rows: 2% 98%;
-    grid-row: 1/2;
-    border: 1px solid black;
-} */
-
 .navlist {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    gap: 1rem;
+    gap: 0rem 0.5rem;
     list-style: none;
-    grid-column: 1/5;
+    width: fit-content;
 }
 
 .navlist>li {
@@ -149,8 +137,6 @@ ul {
 
 .navlist>li:hover {
     cursor: pointer;
-    color: white;
-    background-color: black;
 }
 
 #navFile {
@@ -171,10 +157,42 @@ ul {
 
 /* Menus */
 
+.menuContainer {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0rem 0.5rem;
+    grid-column: 1/2;
+    width: 108.09px;
+}
+
 .fileMenu,
 .editMenu,
 .viewMenu,
 .helpMenu {
-    border: 1px black solid;
-    grid-row: 2/3;
+    width: fit-content;
+}
+
+.fileMenu>ul>li:hover,
+.editMenu>ul>li:hover,
+.viewMenu>ul>li:hover,
+.helpMenu>ul>li:hover {
+    cursor: pointer;
+}
+
+.fileMenu {
+    grid-column: 1/2;
+}
+
+.editMenu {
+    grid-column: 2/3;
+}
+
+.viewMenu {
+    grid-column: 3/4;
+}
+
+.helpMenu {
+    grid-column: 4/5;
 }

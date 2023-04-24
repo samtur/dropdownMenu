@@ -8,33 +8,53 @@ const dropdown = () => {
   const viewMenu = document.querySelector(".viewMenu");
   const helpMenu = document.querySelector(".helpMenu");
 
-  navFile.addEventListener("click", function () {
-    if (fileMenu.classList.contains("hidden")) {
-      fileMenu.classList.remove("hidden");
-    } else {
-      fileMenu.classList.add("hidden");
-    }
+  navFile.addEventListener("mouseover", function () {
+    fileMenu.classList.remove("hidden");
   });
-  navEdit.addEventListener("click", function () {
-    if (editMenu.classList.contains("hidden")) {
-      editMenu.classList.remove("hidden");
-    } else {
-      editMenu.classList.add("hidden");
-    }
+  navFile.addEventListener("mouseout", function () {
+    fileMenu.classList.add("hidden");
   });
-  navView.addEventListener("click", function () {
-    if (viewMenu.classList.contains("hidden")) {
-      viewMenu.classList.remove("hidden");
-    } else {
-      viewMenu.classList.add("hidden");
-    }
+  fileMenu.addEventListener("mouseover", function () {
+    fileMenu.classList.remove("hidden");
   });
-  navHelp.addEventListener("click", function () {
-    if (helpMenu.classList.contains("hidden")) {
-      helpMenu.classList.remove("hidden");
-    } else {
-      helpMenu.classList.add("hidden");
-    }
+  fileMenu.addEventListener("mouseout", function () {
+    fileMenu.classList.add("hidden");
+  });
+  navEdit.addEventListener("mouseover", function () {
+    editMenu.classList.remove("hidden");
+  });
+  navEdit.addEventListener("mouseout", function () {
+    editMenu.classList.add("hidden");
+  });
+  editMenu.addEventListener("mouseover", function () {
+    editMenu.classList.remove("hidden");
+  });
+  editMenu.addEventListener("mouseout", function () {
+    editMenu.classList.add("hidden");
+  });
+  navView.addEventListener("mouseover", function () {
+    viewMenu.classList.remove("hidden");
+  });
+  navView.addEventListener("mouseout", function () {
+    viewMenu.classList.add("hidden");
+  });
+  viewMenu.addEventListener("mouseover", function () {
+    viewMenu.classList.remove("hidden");
+  });
+  viewMenu.addEventListener("mouseout", function () {
+    viewMenu.classList.add("hidden");
+  });
+  navHelp.addEventListener("mouseover", function () {
+    helpMenu.classList.remove("hidden");
+  });
+  navHelp.addEventListener("mouseout", function () {
+    helpMenu.classList.add("hidden");
+  });
+  helpMenu.addEventListener("mouseover", function () {
+    helpMenu.classList.remove("hidden");
+  });
+  helpMenu.addEventListener("mouseout", function () {
+    helpMenu.classList.add("hidden");
   });
 };
 
